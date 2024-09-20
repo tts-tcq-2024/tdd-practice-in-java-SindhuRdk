@@ -3,9 +3,9 @@ package TddPracticeInJava;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
+ 
 public class StringCalculatorTest {
-
+ 
     
     @Test
     public void ExpectZeroForEmptyInput()
@@ -14,10 +14,10 @@ public class StringCalculatorTest {
         String input = "";
         StringCalculator objUnderTest = new StringCalculator();
         int result = objUnderTest.add(input);
-
+ 
        assertEquals(expectedResult,result);
     }
-
+ 
   @Test
     public void ExpectZeroForSingleZero()
     {
@@ -26,9 +26,9 @@ public class StringCalculatorTest {
         StringCalculator objUnderTest = new StringCalculator();
         int result = objUnderTest.add(input);
        assertEquals(expectedResult,result);
-
+ 
     }
-
+ 
    @Test
     public void ExpectSumForTwoNumbers()
     {
@@ -38,7 +38,7 @@ public class StringCalculatorTest {
         int result = objUnderTest.add(input);
         assertEquals(expectedResult,result);
     }
-
+ 
    @Test
     public void ExpectSumWithNewlineDelimiter()
     {
@@ -48,15 +48,15 @@ public class StringCalculatorTest {
         int result = objUnderTest.add(input);
          assertEquals(expectedResult,result);
     }
-
  
+
     @Test
     public void ignoreNumbersGreaterThan1000() {
         int expectedResult = 1;
         String input = "1,1001";
         StringCalculator objUnderTest = new StringCalculator();
         int result = objUnderTest.add(input);
-
+ 
        assertEquals(expectedResult,result);
     }
     @Test
@@ -66,7 +66,7 @@ public class StringCalculatorTest {
         String input = "//;\n1;2";
         StringCalculator objUnderTest = new StringCalculator();
         int result = objUnderTest.add(input);
-
+ 
       assertEquals(expectedResult,result);
     }
 }
